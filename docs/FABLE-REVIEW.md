@@ -61,6 +61,7 @@ When a story is read, write its audio tags in the same pass (Mikey, pass JH). A 
 5. Deliver the pass the usual way (docs/NEW-CHAT.md and CLAUDE.md), and say in the DECISIONS entry what changed in each module.
 6. Mikey approved the voice after the JF sample. Keep showing him each batch, and change course when he says so.
 7. New courses after the review (PHIL 1301 and the rest) are written this way from the start.
+8. Read docs/PICTURE-CANDIDATES.md (node tools/picture-candidates.mjs) for the modules in the batch, and give each comparison its picture where seeing the real thing teaches more than the words.
 
 ## Learned in pass JF, from the first rewritten module
 
@@ -98,3 +99,13 @@ Mikey asked whether the review covers writing style, explanatory quality and con
 - A lesson picture in a read-aloud lesson names its spoken line (step) and shares a word with it.
 - Anchor an early idea to something that is truly so (yellow like a banana, not like the sun), and never model something unsafe, even in passing.
 - Explanations say the answer and the reason in the lesson's own words (This one is red, like a strawberry; The big circle takes up more room, so it is bigger).
+
+## Learned in pass JV (kindergarten Letters)
+
+- Write every sound a voice will say as the sound or by its anchor word (cuh; the sound at the start of apple). A voice reads a bare letter as its name, so "C, a, t" was heard as see, ay, tee, which never blends into cat. Check scripts, setups, explanations and stories for this, not only lessons about sounds.
+- Describe a traced letter the way the app draws it (TRACE_LETTERS), and check the drawing too: six letters were drawn from the bottom while their lessons said down.
+- When a lesson cannot show everything its questions ask without becoming too long for its learners, split the asking across lessons by family rather than lengthen the lesson, say so plainly, and record it. Each round's review question keeps earlier lessons in practice.
+
+## Pictures beside comparisons (pass JV, Mikey)
+
+Mikey's example: the pre-K 3 Triangles lesson says a slice of pizza is almost a triangle, and a slice beside the triangle shows it at a glance. Whenever a lesson compares an idea to a real thing (almost a triangle like a pizza slice, a cone like an ice cream cone, red like a strawberry), part 8 asks whether a picture of the real thing beside the idea would teach more than the words. For young learners it usually would. Do both halves: give the line a drawn pair now when the app can draw the thing (show a pair, the real thing and the idea, adding a drawing if one is missing), and log a P painting in docs/ART-REQUESTS.md with the real thing and the idea side by side. A painting replaces the drawn pair on that line once Mikey uploads it. docs/PICTURE-CANDIDATES.md lists every early-years lesson line that compares and has no picture yet; read its rows for each module in the batch, and widen the tool to older grades when the review reaches them.

@@ -28,6 +28,8 @@ for (const name of ['Skip tour', 'Later', 'Got it']) { const b = page.getByRole(
 await page.getByRole('button', { name: 'Add someone new' }).click(); await page.fill('input[placeholder="School-issued ID"]', 'S-1'); await page.getByRole('button', { name: /^Elementary/ }).click(); await page.getByRole('button', { name: 'Add', exact: true }).click(); await page.waitForTimeout(250);
 for (const name of ['Done', 'Not now', 'Skip', 'Later', 'Got it']) { const b = page.getByRole('button', { name }); if (await b.count()) { await b.first().click({ force: true }); await page.waitForTimeout(100); } }
 await page.getByRole('button', { name: 'Open report' }).first().click(); await page.waitForFunction(() => window.__eduTest && window.__eduTest.screen === 'educator-report');
+// A saved note, so its date and its Edit and Remove links are measured too (pass JV: in the dark theme they were nearly invisible).
+await page.locator('textarea[aria-label="Teacher note"]').first().fill('Reads well on the light card.'); await page.getByRole('button', { name: 'Save note' }).click(); await page.waitForTimeout(250);
 await page.getByRole('button', { name: 'Back to Classroom' }).click(); await page.waitForFunction(() => window.__eduTest && window.__eduTest.screen === 'educator-pick');
 
 // Every word on the screen, measured against what it actually sits on (backgrounds stacked up through its parents).

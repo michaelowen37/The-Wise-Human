@@ -1,6 +1,6 @@
 # Audio ledger
 
-Generated 2026-10-04 by tools/audio-ledger.mjs. Every clip the app can play in a recorded voice is a row of docs/AUDIO-LEDGER.csv: its key (the file name, audio/<key>.mp3, that the app already looks for), its group (the story or lesson it belongs to) and the words with their Eleven v4 audio tags. 6788 clips, 1,256,038 characters in all; the longest clip is 508 characters and the longest whole story 2,751, far under Eleven v4's 10,000 a request. 144 stories carry hand-written tags so far (the writing review adds them course by course); the rest open with their age band's voice direction only.
+Generated 2026-10-04 by tools/audio-ledger.mjs. Every clip the app can play in a recorded voice is a row of docs/AUDIO-LEDGER.csv: its key (the file name, audio/<key>.mp3, that the app already looks for), its group (the story or lesson it belongs to) and the words with their Eleven v4 audio tags. 6826 clips, 1,261,841 characters in all; the longest clip is 508 characters and the longest whole story 2,751, far under Eleven v4's 10,000 a request. 144 stories carry hand-written tags so far (the writing review adds them course by course); the rest open with their age band's voice direction only.
 
 ## How to make the audio
 
@@ -17,7 +17,7 @@ ElevenLabs counts characters, tags included, so this is the size of each part of
 
 | Band | Clips | Characters |
 |---|---|---|
-| Pre-K to grade 2 | 2732 | 304,378 |
+| Pre-K to grade 2 | 2770 | 310,181 |
 | Grades 3 to 5 | 1263 | 278,553 |
 | Grades 6 to 8 | 1138 | 272,072 |
 | Grades 9 to college | 1655 | 401,035 |
@@ -41,7 +41,7 @@ Questions stay warm, pleasant and mildly upbeat, never over-excited. Young learn
 |---|---|
 | story title | 615 |
 | story | 3887 |
-| lesson line | 1368 |
+| lesson line | 1406 |
 | long story title | 102 |
 | long story | 816 |
 
@@ -769,23 +769,23 @@ Questions stay warm, pleasant and mildly upbeat, never over-excited. Young learn
 
 ### Cat, hat, bat (S290, rhymes)
 
-- S290-1: [softly, a bedtime voice] At bedtime Rosa heard a rhyme about a cat that sat on a hat. [giggles] She giggled, because cat and hat sounded like twins.
-- S290-2: [curious] Why did they sound alike? The starts were different, cuh and huh, not the same at all.
-- S290-3: The ends were the same, [slowly, stretching the sounds] at and at. Then the bat came in, and there was at again. Three words with one ending.
-- S290-4: [thoughtful] That was what made them rhyme, the same ending sound. Rosa listened for it after that.
-- S290-5: Mom read on. [playful, rhyming] The dog on a log, og and og! A frog on the log, og! [clapping] Rosa clapped every time.
-- S290-6: Then she made up her own: cat, hat, bat, mat, sat, rat. [whispers] She was still going when the light went out.
-- S290-7: [slowly, warmly] Rhyming words end with the same sound.
+- S290-1: [softly, a bedtime voice] At bedtime Rosa heard a rhyme about a cat that sat on a hat. [giggling] She giggled, because cat and hat sounded like twins.
+- S290-2: [puzzled] Why did they sound alike? The starts were different, cuh and huh, not the same at all.
+- S290-3: [slowly] The ends were the same, at and at. Then a bat flew into the rhyme, and there was at again. Three words with one ending.
+- S290-4: [warmly] That was what made them rhyme, the same ending sound. Rosa listened for it after that.
+- S290-5: [playful, rhythmic] Mom read on. The dog on a log, og and og! A frog on the log, og! [clapping] Rosa clapped every time.
+- S290-6: [delighted] Then she made up rhymes of her own. Cat, hat, bat, mat, sat, rat! [softly] She was still going when the light went out.
+- S290-7: [slowly, warmly] Rhyming words end with the same sound. Listen to the end of each word.
 
 ### The T on the window (S293, tracing-letters)
 
 - S293-1: [a finger squeaking on a foggy window] The window was foggy, and Diego pressed a finger on it to make a line. He wanted to make a T, like the one on his cup.
 - S293-2: He drew a line across, and then another line across. [puzzled] That looked like an equals sign, not a T.
-- S293-3: His mom put a dot at the top of the glass. [gently] Start here, she said. Go down, lift your finger, and then go across the top.
-- S293-4: Diego put his finger on the dot. [slowly] Down, lift, across the top. [delighted] A T, dripping a little!
+- S293-3: His mom put a dot at the top of the glass. [gently] Start here, she said. Go across the top, lift your finger, and then go down the middle.
+- S293-4: Diego put his finger on the dot. [slowly] Across the top, lift, then down the middle. [delighted] A T, dripping a little!
 - S293-5: [playful] He made another one next to it. Then he made an L, down and across the bottom, and an I, which was just down.
 - S293-6: By the time the fog cleared, the window was full of letters. [softly, a little wistful] Then the sun came out, and they all faded away.
-- S293-7: [slowly, warmly] Start at the dot. Follow the arrow. Stay on the line.
+- S293-7: [slowly, warmly] Start at the dot. Follow the arrow. Lift your finger between lines.
 
 ### The small a sits low (S296, tracing-small-letters)
 
@@ -794,8 +794,8 @@ Questions stay warm, pleasant and mildly upbeat, never over-excited. Young learn
 - S296-3: [gently] Start at the dot, her teacher said. Go round, then down, and do not go up high. Stay low.
 - S296-4: Lena tried it, round and then down. The small a sat low on the line, like a curled-up cat, [pleased] and that was right.
 - S296-5: [slowly, tracing] Then she traced the small c, round and stop, low. After that, the small o, round and round, and low.
-- S296-6: [proud] Big letters stand tall and small letters sit low. Lena traced a whole line of them, all of them sitting.
-- S296-7: [slowly, warmly] Small letters sit low. Start at the dot and follow the arrow.
+- S296-6: [proud] Big letters stand tall. Most small letters sit low, and a few, like l and t, reach up tall. Lena traced a whole line of small letters, low ones and tall ones.
+- S296-7: [slowly, warmly] Most small letters sit low, and a few reach up tall. Start at the dot.
 
 ### The E, one line at a time (S299, tracing-more-letters)
 
@@ -803,7 +803,7 @@ Questions stay warm, pleasant and mildly upbeat, never over-excited. Young learn
 - S299-2: His teacher laughed, kindly. [warmly] An E is not one line, she said. It is four.
 - S299-3: [slowly, a steady rhythm] Down and lift, across the top and lift, across the middle and lift, and then across the bottom. That is four lines and three lifts.
 - S299-4: Kai tried it. [slowly] Down, lift, across, lift, across, lift, across. [proud] An E, clean and straight!
-- S299-5: [playful] Then he made an F, with one line down and two lines across. Three lines and two lifts. Then an H, two downs and a bridge.
+- S299-5: [playful] Then he made a K, one line down and two slants that meet it in the middle. Three lines and two lifts. Then an X, two slants that cross.
 - S299-6: Lift, lift, lift, [chalk squeaking] and the chalk squeaked every time. Kai filled the whole board with letters made of lines.
 - S299-7: [slowly, warmly] One line at a time. Lift your finger between lines.
 
@@ -815,47 +815,47 @@ Questions stay warm, pleasant and mildly upbeat, never over-excited. Young learn
 - S302-4: Elijah clapped it, E, li, jah, [delighted] and that made three! [proud] He grinned, and then he clapped it again, louder.
 - S302-5: They went around the circle. Sam was one clap, and Rosa was two, Ro, sa. Then a girl with a long name clapped four, [clapping four beats] Ma, ri, an, na!
 - S302-6: [playful, clapping] Then they clapped other words. Apple was ap, ple, and banana was ba, na, na. Every word had beats inside it.
-- S302-7: [slowly, warmly] Say the word slowly and clap each beat.
+- S302-7: [slowly, warmly] Say the word slowly and clap once for each beat.
 
 ### The word on the door (S305, sounding-out)
 
 - S305-1: [curious] There were three letters on the door, C, A and T, and Ana knew each one. What she did not know was the word.
 - S305-2: She said the letter names, [slowly] see, ay, tee, but that was not a word. It was just three names in a row.
-- S305-3: [helpful] Say the sounds, said her brother, not the names. [slowly, stressing each sound] Cuh. A. Tuh. Say them slowly, and then say them faster.
-- S305-4: [slowly, then faster] Cuh, a, tuh. Cuh-a-tuh, cuh-a-tuh, and then all at once, cat! [excited] Ana said it again, louder. Cat!
+- S305-3: [helpful] Say the sounds, said her brother, not the names. [slowly, stressing each sound] C says cuh, A says the sound at the start of apple, and T says tuh.
+- S305-4: [slowly, then faster] Ana said them slowly, then faster and faster, until the sounds ran together. [excited] Cat! She said it again, louder. Cat!
 - S305-5: [a door creaking open] She opened the door, [a cat meowing] and there was the cat, sitting on the mat and looking up at her.
-- S305-6: Ana went looking for more doors. D-O-G came out as duh-o-guh, [delighted] and then dog! [amused] There was no dog behind that one, but she read it anyway.
-- S305-7: [slowly, warmly] Say each sound. Then say them fast together.
+- S305-6: Ana went looking for more doors. The next one had D, O and G on it. She sounded them out the same way, [delighted] and out came dog! [amused] There was no dog behind that door, but she read it anyway.
+- S305-7: [slowly, warmly] Say each letter sound in order. Then say the sounds fast together to hear the word.
 
 ### Which way the finger goes (S308, which-way-we-read)
 
-- S308-1: Theo put his finger on a page and moved it from right to left. The words came out backward, [robotic] tac and gid, and it sounded like a robot.
-- S308-2: [frustrated] He tried starting in the middle, and that was even worse. He got half a word, and then nothing.
+- S308-1: Theo put his finger on the right side of the page and moved it to the left. The words came out backward. [puzzled] Dig can cat the, which made no sense at all.
+- S308-2: [frustrated] He tried starting in the middle, and that was even worse. He got half a line, and then nothing.
 - S308-3: [gently] [a finger tapping a page] Start on the left, said his teacher, and she tapped the corner. Go to the right, and at the end of the line, hop down.
-- S308-4: Theo started on the left. [slowly, reading] Cat. Dig. Now the words made sense, and at the end of the line he hopped down.
+- S308-4: Theo started on the left. [slowly, reading] The cat can dig! Now the words made sense, and at the end of the line he hopped down.
 - S308-5: [steady, like a journey] Back to the left, then right again, line after line. The page had a road on it, and he was on the road.
 - S308-6: [proud] He read the whole page, and then the next one. His finger knew the way now, even with his eyes closed.
-- S308-7: [slowly, warmly] Start on the left. Go right. Then down to the next line.
+- S308-7: [slowly, warmly] Start on the left. Go right. Then go back to the left and down to the next line.
 
 ### The card and the picture (S311, word-meanings)
 
-- S311-1: [curious] Rosa had a card that said dog. On the table were three pictures, a dog, a sun and a fish. Where did the card go?
+- S311-1: [curious] Nia had a card that said dog. On the table were three pictures, a dog, a sun and a fish. Where did the card go?
 - S311-2: She put it on the sun. Her teacher smiled and shook her head. [gently] Not that one.
-- S311-3: So Rosa said the word out loud. [slowly] Dog. She looked for the dog, and there it was, ears and a tail. [pleased] The card went on the dog.
+- S311-3: So Nia said the word out loud. [slowly] Dog. She looked for the dog, and there it was, ears and a tail. [pleased] The card went on the dog.
 - S311-4: [thoughtful] Then came sun. She said it, and looked for something round and yellow. There it was, so the card went on the sun.
 - S311-5: Then fish, with its fins and scales. There. [delighted] Three cards on three pictures, all of them matched.
-- S311-6: [proud] Her teacher gave her more cards, cat, hat and cup. Rosa said each word and found each picture, and she did not miss again.
-- S311-7: [slowly, warmly] Match the word to the picture. Say it, then find it.
+- S311-6: [proud] Her teacher gave her more cards, cat, hat and cup. Nia said each word and found each picture, and she did not miss again.
+- S311-7: [slowly, warmly] A picture can show what a word means. Check that the word and the picture name the same thing.
 
 ### Slants in the sand (S314, trace-slant-letters)
 
 - S314-1: [waves rolling in] Jamal had a stick and a patch of wet sand. He drew a line straight down and a line straight across. Every letter he knew was made of those two.
 - S314-2: His sister asked for a V. Jamal tried straight down and then straight across, but that was not a V. [giggles] That was an L.
 - S314-3: [helpful] Slant, she said. Down a slant, then up a slant. Jamal tried it, and there was a point at the bottom. [delighted] A V!
-- S314-4: Then came an A, with a slant up, a slant down and a line across the middle. [playful] It looked like a tent with a bar.
+- S314-4: Then came an A, two slants down from one point and a line across the middle. [playful] It looked like a tent with a bar.
 - S314-5: [slowly, tracing] Then came an N. It went down, then slanted, then went up. Three lines made an N, and slanted lines had made all three letters.
 - S314-6: V, A, N. [a wave washing over sand] Then a wave came and washed them away. Jamal drew them again, bigger and farther up the beach.
-- S314-7: [slowly, warmly] Slanted lines make V, A and N. Start at the dot.
+- S314-7: [slowly, warmly] Slanted lines make V, A and N. Start at the dot and follow the arrow.
 
 ### Ten and three (S317, teen-numbers)
 

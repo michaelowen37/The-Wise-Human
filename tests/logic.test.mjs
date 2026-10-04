@@ -182,11 +182,11 @@ for (const [genId, gen] of Object.entries(L.GENERATORS)) {
     if (genId === 'ry-pick-one' && SYL[q.answer] !== 1) problems.push('pick-one wrong');
     if (genId === 'ry-more-claps' && SYL[q.answer] !== Math.max(...q.choices.map((c) => SYL[c]))) problems.push('more claps wrong');
     if (genId === 'ry-same-claps' && SYL[q.answer] !== SYL[q.story.replace(/\.$/, '').toLowerCase()]) problems.push('same claps wrong');
-    if (genId === 'rd-blend' && q.answer !== q.story.replace(/[,. ]/g, '')) problems.push('blend wrong');
+    if (genId === 'rd-blend' && q.answer !== q.visual.text.replace(/ /g, '')) problems.push('blend wrong');   // pass JV: the setup names the letters
     if (genId === 'rd-first-sound' && q.answer !== q.story.replace(/\.$/, '').toLowerCase()[0]) problems.push('first sound wrong');
     if (genId === 'rd-last-sound' && q.answer !== q.story.replace(/\.$/, '').toLowerCase().slice(-1)) problems.push('last sound wrong');
     if (genId === 'rd-middle-sound' && q.answer !== q.story.replace(/\.$/, '').toLowerCase()[1]) problems.push('middle sound wrong');
-    if (genId === 'rd-which-word' && q.answer !== q.story.replace(/^Read(?: the sounds)?:? /, '').replace(/[ .]/g, '')) problems.push('which word wrong');
+    if (genId === 'rd-which-word' && q.answer !== q.visual.text.replace(/ /g, '')) problems.push('which word wrong');
     const lineWords = (t) => t.trim().split(/\s+/);
     if (genId === 'rw-first' && q.answer !== lineWords(q.story)[0]) problems.push('first word wrong');
     if (genId === 'rw-last' && q.answer !== lineWords(q.story).slice(-1)[0]) problems.push('last word wrong');

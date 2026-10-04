@@ -3331,16 +3331,19 @@ function LETTER_MODULES() { return [
     tagline: 'Words that sound alike',
     requires: ['letter-sounds'],
     lesson: {
-      paragraphs: ['Words rhyme when their endings sound the same. Cat and hat rhyme. Dog and log rhyme.', 'Say the words out loud and listen to how they end.'],
-      keyIdea: 'Rhyming words end with the same sound.',
-      example: { kind: 'letters', text: 'dog log', caption: 'Cat, hat. They rhyme.' },
+      paragraphs: ['Two words rhyme when they end with the same sound. Cat and hat rhyme, because both end with at. Only their starts are different, cuh in cat and huh in hat.', 'Words that end differently do not rhyme. Cat and dog do not rhyme, because cat ends with at and dog ends with og.', 'To check for a rhyme, say the words out loud and listen to the end of each one. Dog, log and fog all end with og, so all three rhyme with each other.'],
+      keyIdea: 'Rhyming words end with the same sound. Listen to the end of each word.',
+      example: { kind: 'letters', text: 'cat hat', highlight: 'at', caption: 'Cat and hat both end with at, so they rhyme.' },
       script: [
-        { say: 'Cat. Hat. These two words end the same way, so they rhyme.', show: { kind: 'letters', text: 'cat hat', highlight: 'at' } },
-        { say: 'Dog. Log. These two words rhyme as well.', show: { kind: 'letters', text: 'dog log', highlight: 'og' } },
-        { say: 'Listen to the end of each word. The same ending makes the same rhyme.', show: { kind: 'letters', text: 'cat hat', highlight: 'at' } },
+        { say: 'Cat. Hat. Listen to the ends. Both words end with at, so cat and hat rhyme.', show: { kind: 'letters', text: 'cat hat', highlight: 'at' } },
+        { say: 'Their starts are different, cuh in cat and huh in hat. A rhyme only needs the ends to match.', show: { kind: 'letters', text: 'cat hat', highlight: 'first' } },
+        { say: 'Dog and log rhyme too, because both end with og.', show: { kind: 'letters', text: 'dog log', highlight: 'og' } },
+        { say: 'Cat and dog do not rhyme. Cat ends with at, but dog ends with og.', show: { kind: 'letters', text: 'cat dog' } },
+        { say: 'Some rhymes come in big families. Dog, log and fog all end with og.', show: { kind: 'letters', text: 'dog log fog', highlight: 'og' } },
+        { say: 'Say both words out loud and listen to the end of each one. If the ends match, the words rhyme.', show: { kind: 'letters', text: 'hat bat', highlight: 'at' } },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.2A.i (identify and produce rhyming words) and Common Core RF.K.2.A.'],
+    sources: ['Aligned with TEKS K.2.A.i (identifying and producing rhyming words) and CCSS RF.K.2.A.'],
     generators: ['rr-does-rhyme', 'rr-pick-rhyme', 'rr-odd-rhyme', 'rr-same-end', 'rr-which-two'],
   },
   {
@@ -3351,17 +3354,23 @@ function LETTER_MODULES() { return [
     requires: ['letter-names'],
     needsTouch: true,
     lesson: {
-      paragraphs: ['Every letter is made of a few strokes. Start at the dot and follow the arrow.', 'Go slowly. Lift your finger when the line ends, then start the next one at its dot.'],
-      keyIdea: 'Start at the dot. Follow the arrow. Stay on the line.',
-      example: { kind: 'trace', text: 'L', caption: 'Down, then across. That is L.' },
+      paragraphs: ['Every letter is made of a few lines. A dot shows where each line starts, and an arrow shows which way it goes. Starting at the same dot every time teaches your hand the way, so the letter comes out right even when you write fast.', 'Some letters are only lines down and lines across. L, T, I, H, E and F are made that way. Lift your finger when one line ends, then start the next line at its own dot.', 'O and C go around instead. O comes all the way back to where it started, and C stops before it closes.'],
+      keyIdea: 'Start at the dot. Follow the arrow. Lift your finger between lines.',
+      example: { kind: 'trace', text: 'L', caption: 'A line down, then a line across the bottom. That is L.' },
       script: [
-        { say: 'Start at the dot. Go down. That is one line.', show: { kind: 'trace', text: 'L' } },
-        { say: 'Now start at the new dot. Go across. That makes L.', show: { kind: 'trace', text: 'L' } },
-        { say: 'Start at the dot. Follow the arrow. Stay on the line.', show: { kind: 'trace', text: 'L' } },
+        { say: 'Every letter is made of a few lines. L is a line down, then a line across the bottom.', show: { kind: 'trace', text: 'L' } },
+        { say: 'T is a line across the top, then a line down the middle.', show: { kind: 'trace', text: 'T' } },
+        { say: 'I is just one line, straight down.', show: { kind: 'trace', text: 'I' } },
+        { say: 'H is two lines down, then a bridge across the middle.', show: { kind: 'trace', text: 'H' } },
+        { say: 'E is a line down, then three lines across, at the top, the middle and the bottom.', show: { kind: 'trace', text: 'E' } },
+        { say: 'F is like E without the bottom line, so it has one line down and two lines across.', show: { kind: 'trace', text: 'F' } },
+        { say: 'O goes around. Start at the top, go around to the left, and come back to the dot.', show: { kind: 'trace', text: 'O' } },
+        { say: 'C goes around too, but it stops before it closes, like a cookie with a bite out of it.', show: { kind: 'trace', text: 'C' } },
+        { say: 'Start at the dot every time, so your letters come out the same way again and again.', show: null },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.2E (develop handwriting by accurately forming all uppercase and lowercase letters) and Common Core L.K.1.A.'],
-    generators: ['rt-trace-easy', 'rt-trace-easy', 'rt-trace-medium', 'rt-trace-medium', 'rt-trace-any'],
+    sources: ['Aligned with TEKS K.2.E (develop handwriting by accurately forming all uppercase and lowercase letters using appropriate directionality) and CCSS L.K.1.A (print many upper- and lowercase letters).'],
+    generators: ['rt-trace-easy', 'rt-trace-easy', 'rt-trace-round', 'rt-trace-first', 'rt-trace-first'],
   },
   {
     id: 'tracing-small-letters',
@@ -3371,16 +3380,23 @@ function LETTER_MODULES() { return [
     requires: ['tracing-letters'],
     needsTouch: true,
     lesson: {
-      paragraphs: ['Small letters sit lower and some reach up tall. Start at the dot and follow the arrow.', 'Go slowly. Lift your finger when the line ends.'],
-      keyIdea: 'Small letters sit low. Start at the dot and follow the arrow.',
-      example: { kind: 'trace', text: 'l', caption: 'Straight down. That is small l.' },
+      paragraphs: ['Small letters have shapes of their own. Most of them are short and sit low on the line, and a few, like l and t, reach up tall.', 'Some small letters are lines, like l, i and t. Some go around, like o and c. Some slant, like v and x, and some have humps and curves, like n and u. Start each one at its dot and follow the arrow.'],
+      keyIdea: 'Most small letters sit low, and a few reach up tall. Start at the dot.',
+      example: { kind: 'trace', text: 'l', caption: 'One tall line, straight down. That is small l.' },
       script: [
-        { say: 'Start at the dot. Go straight down. That is small l.', show: { kind: 'trace', text: 'l' } },
-        { say: 'Start at the dot. Go around. That is small o.', show: { kind: 'trace', text: 'o' } },
-        { say: 'Start at the dot. Follow the arrow. Stay on the line.', show: { kind: 'trace', text: 'o' } },
+        { say: 'Most small letters sit low, but small l reaches up tall. It is one line, straight down.', show: { kind: 'trace', text: 'l' } },
+        { say: 'Small i is a short line down, then a dot on top.', show: { kind: 'trace', text: 'i' } },
+        { say: 'Small t reaches up too. Go down, then make a short line across.', show: { kind: 'trace', text: 't' } },
+        { say: 'Small o is a little circle. Start at the top and go around to the left.', show: { kind: 'trace', text: 'o' } },
+        { say: 'Small c goes around like o, but it stops before it closes.', show: { kind: 'trace', text: 'c' } },
+        { say: 'Small v slants down to a point, then slants back up.', show: { kind: 'trace', text: 'v' } },
+        { say: 'Small x is two slanted lines that cross in the middle.', show: { kind: 'trace', text: 'x' } },
+        { say: 'Small n is a line down, then a hump that goes over and down.', show: { kind: 'trace', text: 'n' } },
+        { say: 'Small u goes down, curves around the bottom and up, then makes a short line down.', show: { kind: 'trace', text: 'u' } },
+        { say: 'Start at the dot, follow the arrow, and keep the short letters low on the line.', show: null },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.2E (develop handwriting by accurately forming all uppercase and lowercase letters) and Common Core L.K.1.A.'],
+    sources: ['Aligned with TEKS K.2.E (develop handwriting by accurately forming all uppercase and lowercase letters using appropriate directionality) and CCSS L.K.1.A (print many upper- and lowercase letters).'],
     generators: ['rt-trace-small-easy', 'rt-trace-small-easy', 'rt-trace-small-round', 'rt-trace-small-round', 'rt-trace-small-any'],
   },
   {
@@ -3391,16 +3407,20 @@ function LETTER_MODULES() { return [
     requires: ['tracing-small-letters'],
     needsTouch: true,
     lesson: {
-      paragraphs: ['Some letters zigzag. Some cross in the middle. Start at the dot and follow the arrow, one line at a time.', 'Lift your finger between lines.'],
+      paragraphs: ['Some letters zigzag, with lines that slant one way and then the other. Z, W and M zigzag. Other letters have lines that cross or meet in the middle, like X, Y and K.', 'These letters take more than one line, so lift your finger when a line ends and start the next one at its own dot. Each slant goes the way its arrow points.'],
       keyIdea: 'One line at a time. Lift your finger between lines.',
-      example: { kind: 'trace', text: 'Z', caption: 'Across, down and back, across. That is Z.' },
+      example: { kind: 'trace', text: 'Z', caption: 'Across, slant down to the left, then across. That is Z.' },
       script: [
-        { say: 'Start at the dot. Go across, then down and back, then across. That is Z.', show: { kind: 'trace', text: 'Z' } },
-        { say: 'Start at the dot. Go down. Then two lines that meet in the middle. That is K.', show: { kind: 'trace', text: 'K' } },
-        { say: 'K takes three lines. Lift your finger between lines.', show: { kind: 'trace', text: 'K' } },
+        { say: 'Some letters zigzag. Z goes across the top, slants down to the left, then goes across the bottom.', show: { kind: 'trace', text: 'Z' } },
+        { say: 'W zigzags too. Slant down, up, down and up again, like two V shapes side by side.', show: { kind: 'trace', text: 'W' } },
+        { say: 'M starts with a line straight down. Then go back to the top, slant down to the middle, slant up and go straight down.', show: { kind: 'trace', text: 'M' } },
+        { say: 'Some letters cross. X is two slanted lines that cross in the middle.', show: { kind: 'trace', text: 'X' } },
+        { say: 'Y is two slants that meet in the middle, then one line straight down.', show: { kind: 'trace', text: 'Y' } },
+        { say: 'K is a line down, then two slants that meet it in the middle, one coming in and one going out.', show: { kind: 'trace', text: 'K' } },
+        { say: 'Lift your finger between lines, and start each new line at its own dot.', show: null },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.2E (develop handwriting by accurately forming all uppercase and lowercase letters) and Common Core L.K.1.A.'],
+    sources: ['Aligned with TEKS K.2.E (develop handwriting by accurately forming all uppercase and lowercase letters using appropriate directionality) and CCSS L.K.1.A (print many upper- and lowercase letters).'],
     generators: ['rt-trace-more', 'rt-trace-more', 'rt-trace-mixed', 'rt-trace-more', 'rt-trace-mixed'],
   },
   {
@@ -3410,16 +3430,20 @@ function LETTER_MODULES() { return [
     tagline: 'The beats in a word',
     requires: ['rhymes'],
     lesson: {
-      paragraphs: ['Every word has beats. Clap them as you say the word. Cat has one clap. Rabbit has two, rab and bit.', 'Long words have more beats. Ba-na-na has three.'],
-      keyIdea: 'Say the word slowly and clap each beat.',
-      example: { kind: 'letters', text: 'rab bit', caption: 'Rab, bit. Two claps.' },
+      paragraphs: ['Every word has beats, and each beat is a part of the word you can say by itself. These beats are called syllables. Say a word slowly and clap once for each beat.', 'Cat has one clap. Rabbit has two, rab and bit. Banana has three, ba, na and na.', 'Here is a trick for checking. Put a hand under your chin and say the word slowly. Your chin drops once for each beat.', 'To compare two words, clap each one. Elephant has three claps and dog has one, so elephant has more. Rabbit and pencil both have two claps, so they have the same number.'],
+      keyIdea: 'Say the word slowly and clap once for each beat.',
+      example: { kind: 'letters', text: 'rab bit', caption: 'Rab, bit. Rabbit has two claps.' },
       script: [
-        { say: 'Cat. That word takes one clap.', show: { kind: 'letters', text: 'cat' } },
-        { say: 'Rabbit. Rab, bit. That word takes two claps.', show: { kind: 'letters', text: 'rab bit' } },
-        { say: 'Banana. Ba, na, na. That word takes three claps.', show: { kind: 'letters', text: 'ba na na' } },
+        { say: 'Cat. Say it slowly, and it is still one beat, so cat takes one clap.', show: { kind: 'letters', text: 'cat' } },
+        { say: 'Rabbit. Rab, bit. That is two beats, so rabbit takes two claps.', show: { kind: 'letters', text: 'rab bit' } },
+        { say: 'Banana. Ba, na, na. That is three beats, so banana takes three claps.', show: { kind: 'letters', text: 'ba na na' } },
+        { say: 'Here is a trick. Put a hand under your chin and say monkey. Your chin drops twice, mon and key.', show: { kind: 'letters', text: 'mon key' } },
+        { say: 'Elephant has three claps, el, e and phant. Dog has just one, so elephant has more claps.', show: { kind: 'letters', text: 'el e phant' } },
+        { say: 'Rabbit and pencil both have two claps, so they have the same number of claps.', show: { kind: 'letters', text: 'rabbit pencil' } },
+        { say: 'Say the word slowly and clap once for each beat.', show: null },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.2A.iv (identify syllables in spoken words) and Common Core RF.K.2.B.'],
+    sources: ['Aligned with TEKS K.2.A.iv (identifying syllables in spoken words) and K.2.A.vi (segmenting multisyllabic words into syllables) and CCSS RF.K.2.B.'],
     generators: ['ry-how-many-claps', 'ry-pick-two', 'ry-pick-one', 'ry-more-claps', 'ry-same-claps'],
   },
   {
@@ -3429,16 +3453,23 @@ function LETTER_MODULES() { return [
     tagline: 'Three sounds make a word',
     requires: ['letter-sounds'],
     lesson: {
-      paragraphs: ['Short words are made of a few sounds in a row. Say each sound, then push them together.', 'C, a, t. Cat. S, u, n. Sun.'],
-      keyIdea: 'Say each sound. Then say them fast together.',
-      example: { kind: 'letters', text: 'c a t', caption: 'C, a, t. Cat.' },
+      paragraphs: ['A short word is a few sounds in a row, and in a word like cat each letter stands for one sound. C says cuh, a says the sound at the start of apple, and t says tuh.', 'The middle letter of a short word is often a, e, i, o or u. These five letters are called vowels. A sounds like the start of apple, e like the start of egg, i like the start of igloo, o like the start of octopus and u like the start of up.', 'The other letters are consonants, and you know many of their sounds. B says buh, c says cuh, d says duh, f says fff, g says guh, h says huh and j says juh. L says lll, m says mmm, n says nnn, p says puh, r says rrr, s says sss, t says tuh and w says wuh.', 'To read a new word, say each letter sound in order, then say the sounds faster and faster until they run together into the word. To find one sound, say the word slowly and listen for its start, its middle or its end.'],
+      keyIdea: 'Say each letter sound in order. Then say the sounds fast together to hear the word.',
+      example: { kind: 'letters', text: 'c a t', caption: 'C, a and t make cat.' },
       script: [
-        { say: 'C, a, t. Now say the sounds fast. Cat.', show: { kind: 'letters', text: 'c a t' } },
-        { say: 'S, u, n. Now say the sounds fast. Sun.', show: { kind: 'letters', text: 's u n' } },
-        { say: 'Say each sound. Then push them together.', show: { kind: 'letters', text: 'cat' } },
+        { say: 'A short word is a few sounds in a row. In cat, each letter stands for one sound.', show: { kind: 'letters', text: 'c a t' } },
+        { say: 'C says cuh, a says the sound at the start of apple, and t says tuh.', show: { kind: 'letters', text: 'c a t' } },
+        { say: 'Say the sounds slowly, then faster and faster, until they run together. Cat!', show: { kind: 'letters', text: 'cat' } },
+        { say: 'The middle letter is often a vowel. A sounds like the start of apple, and e like the start of egg.', show: { kind: 'letters', text: 'a e' } },
+        { say: 'I sounds like the start of igloo, o like the start of octopus, and u like the start of up.', show: { kind: 'letters', text: 'i o u' } },
+        { say: 'Some more letter sounds help here. G says guh, h says huh, j says juh, l says lll, r says rrr, and w says wuh.', show: { kind: 'letters', text: 'g h j l r w' } },
+        { say: 'Now sun. S says sss, u says the sound at the start of up, and n says nnn. Together they make sun.', show: { kind: 'letters', text: 's u n' } },
+        { say: 'The same way, j, a and m make jam, and w, i and g make wig.', show: { kind: 'letters', text: 'jam wig' } },
+        { say: 'To find one sound, say the word slowly. In sun, sss comes first, the up sound is in the middle, and nnn comes last.', show: { kind: 'letters', text: 'sun' } },
+        { say: 'Say each letter sound in order. Then say the sounds fast together to hear the word.', show: null },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.2B.ii (use letter-sound relationships to decode VC and CVC words) and Common Core RF.K.3.'],
+    sources: ['Aligned with TEKS K.2.B.ii (using letter-sound relationships to decode, including VC, CVC, CCVC, and CVCC words) and K.2.A.viii (blending spoken phonemes to form one-syllable words) and CCSS RF.K.3 and RF.K.2.D.'],
     generators: ['rd-blend', 'rd-first-sound', 'rd-last-sound', 'rd-middle-sound', 'rd-which-word'],
   },
   {
@@ -3448,16 +3479,20 @@ function LETTER_MODULES() { return [
     tagline: 'Left to right, top to bottom',
     requires: ['letter-names'],
     lesson: {
-      paragraphs: ['We read from left to right, one word after another. When a line ends we go down to the next one.', 'The first word is on the left. The last word is on the right.'],
-      keyIdea: 'Start on the left. Go right. Then down to the next line.',
-      example: { kind: 'letters', text: 'A B C', caption: 'Start with A. Then B. Then C.' },
+      paragraphs: ['We read from left to right. The first word in a line is the one on the left, and the last word is the one on the right. A space sits between each word and the next, so you can tell where one word ends and count how many there are.', 'Letters inside a word go left to right too, so in A B C, A comes first and C comes last. When a line ends, we go back to the left and down to the next line, and keep reading from there.', 'Reading the other way scrambles the words, so the cat sat would come out sat cat the, which makes no sense.'],
+      keyIdea: 'Start on the left. Go right. Then go back to the left and down to the next line.',
+      example: { kind: 'letters', text: 'the cat sat', caption: 'The comes first, then cat, then sat.' },
       script: [
-        { say: 'Start on the left. A. Then go right. B. C.', show: { kind: 'letters', text: 'A B C' } },
-        { say: 'After A, B and C the line ends, so go down to the next line.', show: { kind: 'letters', text: 'A B C' } },
-        { say: 'A comes first, on the left. B is in the middle, and C comes last, on the right.', show: { kind: 'letters', text: 'A B C' } },
+        { say: 'We read from left to right. In the cat sat, the comes first, because it is on the left.', show: { kind: 'letters', text: 'the cat sat' } },
+        { say: 'Then we move right. After the comes cat, and after cat comes sat, the last word, on the right.', show: { kind: 'letters', text: 'the cat sat' } },
+        { say: 'A space sits between each word and the next. Count the words, the, cat and sat, and you get three.', show: { kind: 'letters', text: 'the cat sat' } },
+        { say: 'Letters go the same way. In A B C, A comes first, on the left, and C comes last.', show: { kind: 'letters', text: 'A B C' } },
+        { say: 'Reading the other way scrambles the words. Sat cat the does not make sense, so always start on the left.', show: { kind: 'letters', text: 'sat cat the' } },
+        { say: 'When a line ends, we go back to the left and down to the next line, and keep reading.', show: null },
+        { say: 'Start on the left, go right, then go back to the left and down to the next line.', show: null },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.2D.ii (recognize that print is read left to right and top to bottom) and Common Core RF.K.1.A.'],
+    sources: ['Aligned with TEKS K.2.D.ii (holding a book right side up, turning pages correctly, and knowing that reading moves from top to bottom and left to right with return sweep) and K.2.D.iii (recognizing that sentences are comprised of words separated by spaces and recognizing word boundaries) and CCSS RF.K.1.A.'],
     generators: ['rw-first', 'rw-last', 'rw-next', 'rw-count-words', 'rw-which-way'],
   },
   {
@@ -3467,16 +3502,23 @@ function LETTER_MODULES() { return [
     tagline: 'Pictures tell you',
     requires: ['sounding-out'],
     lesson: {
-      paragraphs: ['A picture can tell you what a word means. If the word says dog and the picture shows a dog, they match.', 'When you meet a new word, look at the picture for a clue.'],
-      keyIdea: 'Match the word to the picture.',
-      example: { kind: 'shape', name: 'triangle', size: 'small', caption: 'Circle. The picture shows a circle.' },
+      paragraphs: ['A word names something, and a picture can show what it names. When you meet a new word, look at the picture for a clue. If the word says circle and the picture shows a round shape with no corners, the word and the picture match.', 'Some words name flat shapes. A square has four sides that are all the same length, a triangle has three sides and three corners, and a rectangle has four sides, two long and two short.', 'Some words name solid things. A ball is round all over, a box has six flat sides like a block, a can has round ends and straight sides, and a cone is round at one end and comes to a point.', 'Number words tell how many. One, two, three, four, five and six each name a count, so three dots go with the word three.'],
+      keyIdea: 'A picture can show what a word means. Check that the word and the picture name the same thing.',
+      example: { kind: 'shape', name: 'circle', size: 'small', caption: 'Circle. The picture shows a circle.' },
       script: [
-        { say: 'This word says circle. The picture shows a circle. They match.', show: { kind: 'shape', name: 'circle' } },
-        { say: 'A picture of a square is a clue that the word means square.', show: { kind: 'shape', name: 'square' } },
-        { say: 'Read the word. Look at the picture. Do they match?', show: { kind: 'shape', name: 'triangle' } },
+        { say: 'This word says circle, and the picture shows a circle, round with no corners. The word and the picture match.', show: { kind: 'shape', name: 'circle' } },
+        { say: 'A square has four sides that are all the same length.', show: { kind: 'shape', name: 'square' } },
+        { say: 'A triangle has three sides and three corners.', show: { kind: 'shape', name: 'triangle' } },
+        { say: 'A rectangle has four sides, two long and two short.', show: { kind: 'shape', name: 'rectangle' } },
+        { say: 'Some words name solid things. A ball is round all over.', show: { kind: 'solid', name: 'sphere' } },
+        { say: 'A box has six flat sides, like a block.', show: { kind: 'solid', name: 'cube' } },
+        { say: 'A can has round ends and straight sides.', show: { kind: 'solid', name: 'cylinder' } },
+        { say: 'A cone is round at one end and comes to a point, like an ice cream cone.', show: { kind: 'solid', name: 'cone' } },
+        { say: 'Number words tell how many. Three dots go with the word three.', show: { kind: 'dots', count: 3 } },
+        { say: 'Read the word, look at the picture, and check that they name the same thing.', show: null },
       ],
     },
-    sources: ['Aligned with Texas TEKS K.3B (use illustrations and text to learn or clarify word meanings) and Common Core RI.K.7.'],
+    sources: ['Aligned with TEKS K.3.B (use illustrations and texts the student is able to read or hear to learn or clarify word meanings) and K.3.C (identify and use words that name actions; directions; positions; sequences; categories such as colors, shapes, and textures; and locations) and CCSS RI.K.7.'],
     generators: ['rm-match-picture', 'rm-pick-word', 'rm-does-match', 'rm-count-word', 'rm-shape-word'],
   },
   {
@@ -3487,16 +3529,17 @@ function LETTER_MODULES() { return [
     requires: ['tracing-more-letters'],
     needsTouch: true,
     lesson: {
-      paragraphs: ['Some letters lean. Their lines go down at a slant. Start at the dot and follow the arrow.', 'V goes down one way, then up the other. A is two slants and a bar. N is down, slant, up.'],
-      keyIdea: 'Slanted lines make V, A and N. Start at the dot.',
-      example: { kind: 'trace', text: 'V', caption: 'Down one way, up the other. That is V.' },
+      paragraphs: ['Some letters are made of slanted lines, lines that lean like the side of a slide. V, A and N all have slants.', 'V slants down to a point at the bottom, then slants back up. A slants down two ways from its top point and gets a bar across the middle. N goes straight down, then slants down from the top and goes straight up.'],
+      keyIdea: 'Slanted lines make V, A and N. Start at the dot and follow the arrow.',
+      example: { kind: 'trace', text: 'V', caption: 'Slant down to a point, then slant back up. That is V.' },
       script: [
-        { say: 'Start at the dot. Slant down, then slant up. That is V.', show: { kind: 'trace', text: 'V' } },
-        { say: 'Start at the dot. Slant up, slant down, then a bar across. That is A.', show: { kind: 'trace', text: 'A' } },
-        { say: 'Start at the dot. Down, slant down, then up. That is N.', show: { kind: 'trace', text: 'N' } },
+        { say: 'Some letters lean. V slants down to a point, then slants back up.', show: { kind: 'trace', text: 'V' } },
+        { say: 'A starts at its top point. Slant down to the left, go back to the top, slant down to the right, then make a bar across.', show: { kind: 'trace', text: 'A' } },
+        { say: 'N starts with a line straight down. Then go back to the top, slant down, and go straight up.', show: { kind: 'trace', text: 'N' } },
+        { say: 'Start at the dot and follow each slant the way the arrow points.', show: null },
       ],
     },
-    sources: ['Aligned with TEKS §110.2(b)(2)(E) (develops handwriting by accurately forming all uppercase and lowercase letters) and CCSS L.K.1.a (prints many upper- and lowercase letters).'],
+    sources: ['Aligned with TEKS K.2.E (develop handwriting by accurately forming all uppercase and lowercase letters using appropriate directionality) and CCSS L.K.1.A (print many upper- and lowercase letters).'],
     generators: ['pk-trace-van', 'pk-trace-van', 'pk-trace-van', 'pk-trace-van', 'pk-trace-van'],
   },
 ]; }
@@ -3712,7 +3755,7 @@ function PREK3_MODULES() { return [
         { say: 'Count the corners with me. One, two, three.', show: { kind: 'shape', name: 'triangle' } },
         { say: 'This is a circle. It is round, with no corners at all.', show: { kind: 'shape', name: 'circle' } },
         { say: 'This is a square. It has four corners.', show: { kind: 'shape', name: 'square' } },
-        { say: 'A slice of pizza is almost a triangle, with three corners.', show: { kind: 'shape', name: 'triangle' } },
+        { say: 'A slice of pizza is almost a triangle, with three corners.', show: { kind: 'pair', a: { kind: 'icon', name: 'pizza' }, b: { kind: 'shape', name: 'triangle' } } },
       ],
     },
     sources: ['Aligned with Texas Prekindergarten Guidelines V.C.1 (names and describes common 2D shapes) and Head Start ELOF Goal P-MATH 9.'],
@@ -23665,30 +23708,33 @@ const SYLLABLE_WORDS = [
   ['banana', 3], ['elephant', 3], ['umbrella', 3], ['butterfly', 3],
 ];
 const SYL_SPLIT = { rabbit: 'rab bit', apple: 'ap ple', window: 'win dow', pencil: 'pen cil', monkey: 'mon key', tiger: 'ti ger', banana: 'ba na na', elephant: 'el e phant', umbrella: 'um brel la', butterfly: 'but ter fly' };
+// Claps said in words, and a word's beats said the way a teacher claps them: rab and bit, ba, na and na (pass JV).
+const CLAP_WORDS = ['zero', 'one', 'two', 'three'];
+function beatsOf(word) { const p = (SYL_SPLIT[word] || word).split(' '); return p.length < 2 ? p[0] : `${p.slice(0, -1).join(', ')} and ${p[p.length - 1]}`; }
 const sylWord = (rng, n) => pick(rng, SYLLABLE_WORDS.filter(([, c]) => !n || c === n));
 Object.assign(GENERATORS, {
   'ry-how-many-claps': (rng) => {
     const [w, n] = sylWord(rng);
-    return { type: 'choice', story: `Say it slowly, ${w}.`, prompt: 'How many claps?', choices: ['1', '2', '3'], answer: String(n),
-      explain: `${SYL_SPLIT[w] || w}. ${n} ${n === 1 ? 'clap' : 'claps'}.`, visual: { kind: 'letters', text: w }, explainVisual: null };
+    return { type: 'choice', story: `Say the word ${w} slowly.`, prompt: `How many claps does ${w} have?`, choices: ['1', '2', '3'], answer: String(n),
+      explain: n === 1 ? `${capFirst(w)} has one clap. Said slowly, it is still one beat.` : `${capFirst(w)} has ${CLAP_WORDS[n]} claps, ${beatsOf(w)}.`, visual: { kind: 'letters', text: w }, explainVisual: null };
   },
   'ry-pick-two': (rng) => {
     const [w] = sylWord(rng, 2); const [o] = sylWord(rng, 1);
     return { type: 'choice', story: null, prompt: 'Which word has two claps?', choices: shuffle(rng, [w, o]), answer: w,
-      explain: `${SYL_SPLIT[w]}. Two claps. ${capFirst(o)} has one.`, visual: null, explainVisual: null };
+      explain: `${capFirst(w)} has two claps, ${beatsOf(w)}. ${capFirst(o)} has just one.`, visual: null, explainVisual: null };
   },
   'ry-pick-one': (rng) => {
-    const [w] = sylWord(rng, 1); const [o] = sylWord(rng, randInt(rng, 2, 3));
+    const [w] = sylWord(rng, 1); const [o, no] = sylWord(rng, randInt(rng, 2, 3));
     return { type: 'choice', story: null, prompt: 'Which word has one clap?', choices: shuffle(rng, [w, o]), answer: w,
-      explain: `${capFirst(w)}. One clap. ${capFirst(o)} has more.`, visual: null, explainVisual: null };
+      explain: `${capFirst(w)} has one clap. ${capFirst(o)} has ${CLAP_WORDS[no]}, ${beatsOf(o)}.`, visual: null, explainVisual: null };
   },
   'ry-more-claps': (rng) => {
     const [a, na] = sylWord(rng); let [b, nb] = sylWord(rng); let guard = 0;
     while (nb === na && guard++ < 20) [b, nb] = sylWord(rng);
     if (nb === na) [b, nb] = sylWord(rng, na === 1 ? 3 : 1);
-    const answer = na > nb ? a : b;
+    const answer = na > nb ? a : b; const other = answer === a ? b : a;
     return { type: 'choice', story: null, prompt: `Which word has more claps, ${a} or ${b}?`, choices: shuffle(rng, [a, b]), answer,
-      explain: `${answer} has ${Math.max(na, nb)} claps.`, visual: null, explainVisual: null };
+      explain: `${capFirst(answer)} has ${CLAP_WORDS[Math.max(na, nb)]} claps and ${other} has ${CLAP_WORDS[Math.min(na, nb)]}, so ${answer} has more.`, visual: null, explainVisual: null };
   },
   'ry-same-claps': (rng) => {
     const n = randInt(rng, 1, 3);
@@ -23696,41 +23742,47 @@ Object.assign(GENERATORS, {
     while (b === a && guard++ < 20) [b] = sylWord(rng, n);
     const [o] = sylWord(rng, n === 1 ? 2 : 1);
     return { type: 'choice', story: `${capWord(a)}.`, prompt: `Which word has the same number of claps as ${a}?`, choices: shuffle(rng, [b, o]), answer: b,
-      explain: `${a} and ${b} both have ${n} ${n === 1 ? 'clap' : 'claps'}.`, visual: { kind: 'letters', text: a }, explainVisual: null };
+      explain: `${capFirst(a)} and ${b} both have ${CLAP_WORDS[n]} ${n === 1 ? 'clap' : 'claps'}, so they have the same number.`, visual: { kind: 'letters', text: a }, explainVisual: null };
   },
 });
 
 // Sounding out. Three-sound words where every letter says its plain sound.
+// Sounds, written so a voice says the sound and never the letter's name (pass JV): a voice reads a lone letter as its
+// name, and see, ay, tee never blends into cat. A consonant is written as its sound; a vowel by the word it starts.
+const CONSONANT_SOUND = { b: 'buh', c: 'cuh', d: 'duh', f: 'fff', g: 'guh', h: 'huh', j: 'juh', l: 'lll', m: 'mmm', n: 'nnn', p: 'puh', r: 'rrr', s: 'sss', t: 'tuh', w: 'wuh' };
+const VOWEL_ANCHOR = { a: 'apple', e: 'egg', i: 'igloo', o: 'octopus', u: 'up' };
+function letterSound(ch) { return VOWEL_ANCHOR[ch] ? `the sound at the start of ${VOWEL_ANCHOR[ch]}` : (CONSONANT_SOUND[ch] || ch); }
+function sayLetterSounds(w) { return `The letters make three sounds in order, ${letterSound(w[0])}, then ${letterSound(w[1])}, then ${letterSound(w[2])}.`; }
 const CVC_WORDS = ['cat', 'dog', 'sun', 'hat', 'pig', 'bed', 'cup', 'map', 'net', 'top', 'bus', 'fan', 'hen', 'jam', 'log', 'mud', 'pen', 'red', 'sit', 'wig'];
 Object.assign(GENERATORS, {
   'rd-blend': (rng) => {
     const w = pick(rng, CVC_WORDS);
     const others = shuffle(rng, CVC_WORDS.filter((x) => x !== w)).slice(0, 2);
-    return { type: 'choice', story: `${w[0]}, ${w[1]}, ${w[2]}.`, prompt: 'Say the sounds fast. Which word is it?', choices: shuffle(rng, [w, ...others]), answer: w,
-      explain: `${w[0]}, ${w[1]}, ${w[2]}. Say them fast, and you hear ${w}.`, visual: { kind: 'letters', text: w.split('').join(' ') }, explainVisual: null };
+    return { type: 'choice', story: 'Look at these three letters.', prompt: 'Say each letter sound, then say the sounds fast together. Which word do they make?', choices: shuffle(rng, [w, ...others]), answer: w,
+      explain: `${sayLetterSounds(w)} Said fast together, they make ${w}.`, visual: { kind: 'letters', text: w.split('').join(' ') }, explainVisual: null };
   },
   'rd-first-sound': (rng) => {
     const w = pick(rng, CVC_WORDS);
-    return { type: 'choice', story: `${capWord(w)}.`, prompt: `What is the first sound in ${w}?`, choices: shuffle(rng, [w[0], w[1], w[2]]).filter((c, i, arr) => arr.indexOf(c) === i), answer: w[0],
-      explain: `${w} starts with ${w[0]}.`, visual: { kind: 'letters', text: w }, explainVisual: null };
+    return { type: 'choice', story: `${capWord(w)}.`, prompt: `Which letter makes the first sound in ${w}?`, choices: shuffle(rng, [w[0], w[1], w[2]]).filter((c, i, arr) => arr.indexOf(c) === i), answer: w[0],
+      explain: `${capFirst(w)} starts with ${letterSound(w[0])}, the sound ${w[0]} makes.`, visual: { kind: 'letters', text: w }, explainVisual: null };
   },
   'rd-last-sound': (rng) => {
     const w = pick(rng, CVC_WORDS);
-    return { type: 'choice', story: `${capWord(w)}.`, prompt: `What is the last sound in ${w}?`, choices: shuffle(rng, [w[0], w[1], w[2]]).filter((c, i, arr) => arr.indexOf(c) === i), answer: w[2],
-      explain: `${w} ends with ${w[2]}.`, visual: { kind: 'letters', text: w }, explainVisual: null };
+    return { type: 'choice', story: `${capWord(w)}.`, prompt: `Which letter makes the last sound in ${w}?`, choices: shuffle(rng, [w[0], w[1], w[2]]).filter((c, i, arr) => arr.indexOf(c) === i), answer: w[2],
+      explain: `${capFirst(w)} ends with ${letterSound(w[2])}, the sound ${w[2]} makes.`, visual: { kind: 'letters', text: w }, explainVisual: null };
   },
   'rd-middle-sound': (rng) => {
     const w = pick(rng, CVC_WORDS);
     const vowels = ['a', 'e', 'i', 'o', 'u'];
-    return { type: 'choice', story: `${capWord(w)}.`, prompt: `What is the middle sound in ${w}?`, choices: shuffle(rng, [w[1], ...shuffle(rng, vowels.filter((v) => v !== w[1])).slice(0, 2)]), answer: w[1],
-      explain: `${w[0]}, ${w[1]}, ${w[2]}. The middle sound is ${w[1]}.`, visual: { kind: 'letters', text: w }, explainVisual: null };
+    return { type: 'choice', story: `${capWord(w)}.`, prompt: `Which letter makes the middle sound in ${w}?`, choices: shuffle(rng, [w[1], ...shuffle(rng, vowels.filter((v) => v !== w[1])).slice(0, 2)]), answer: w[1],
+      explain: `The middle sound in ${w} is the sound at the start of ${VOWEL_ANCHOR[w[1]]}, and the letter ${w[1]} makes it.`, visual: { kind: 'letters', text: w }, explainVisual: null };
   },
   'rd-which-word': (rng) => {
     const w = pick(rng, CVC_WORDS);
     const near = CVC_WORDS.filter((x) => x !== w && (x[0] === w[0] || x[2] === w[2]));
     const others = shuffle(rng, near.length >= 2 ? near : CVC_WORDS.filter((x) => x !== w)).slice(0, 2);
-    return { type: 'choice', story: `Read the sounds ${w.split('').join(' ')}.`, prompt: 'Which word did you read?', choices: shuffle(rng, [w, ...others]), answer: w,
-      explain: `${w[0]}, ${w[1]}, ${w[2]} makes ${w}.`, visual: { kind: 'letters', text: w.split('').join(' ') }, explainVisual: null };
+    return { type: 'choice', story: 'Here are three letters to sound out.', prompt: 'Which word do they spell?', choices: shuffle(rng, [w, ...others]), answer: w,
+      explain: `${sayLetterSounds(w)} Together they spell ${w}.`, visual: { kind: 'letters', text: w.split('').join(' ') }, explainVisual: null };
   },
 });
 
@@ -23740,27 +23792,27 @@ Object.assign(GENERATORS, {
   'rw-first': (rng) => {
     const line = pick(rng, READ_LINES);
     return { type: 'choice', story: `${line.join(' ')}`, prompt: 'Which word do we read first?', choices: shuffle(rng, [...new Set(line)]), answer: line[0],
-      explain: `We start on the left. The first word is ${line[0]}.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
+      explain: `We start reading on the left, so the first word is ${line[0]}.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
   },
   'rw-last': (rng) => {
     const line = pick(rng, READ_LINES);
     return { type: 'choice', story: `${line.join(' ')}`, prompt: 'Which word do we read last?', choices: shuffle(rng, [...new Set(line)]), answer: line[line.length - 1],
-      explain: `We end on the right. The last word is ${line[line.length - 1]}.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
+      explain: `We read toward the right, so the last word in the line is ${line[line.length - 1]}.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
   },
   'rw-next': (rng) => {
     const line = pick(rng, READ_LINES); const i = randInt(rng, 0, line.length - 2);
     return { type: 'choice', story: `${line.join(' ')}`, prompt: `Which word comes right after the word ${line[i]}?`, choices: shuffle(rng, [...new Set(line)].filter((w) => w !== line[i])), answer: line[i + 1],
-      explain: `After ${line[i]} comes ${line[i + 1]}, moving right.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
+      explain: `After ${line[i]} comes ${line[i + 1]}, because we read to the right.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
   },
   'rw-count-words': (rng) => {
     const line = pick(rng, READ_LINES);
-    return { type: 'choice', story: `${line.join(' ')}`, prompt: 'How many words?', choices: ['3', '4', '5'], answer: String(line.length),
-      explain: `${line.join(', ')}. That is ${line.length} words.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
+    return { type: 'choice', story: `${line.join(' ')}`, prompt: 'How many words are in this line?', choices: ['3', '4', '5'], answer: String(line.length),
+      explain: `Count the words from left to right, ${line.join(', ')}. That makes ${NUMBER_NAMES[line.length]} words.`, visual: { kind: 'letters', text: line.join(' ') }, explainVisual: null };
   },
   'rw-which-way': (rng) => {
     const yes = randInt(rng, 0, 1) === 1;
     return { type: 'choice', story: yes ? 'We read from left to right, A then B then C.' : 'We read from right to left, C then B then A.', prompt: 'Is this right?', choices: ['Yes', 'No'], answer: yes ? 'Yes' : 'No',
-      explain: 'We read from left to right, then down to the next line.', visual: { kind: 'letters', text: 'A B C' }, explainVisual: null };
+      explain: yes ? 'We read from left to right, so A comes first, then B, then C. This is right.' : 'We read from left to right, not right to left, so A comes first and C comes last.', visual: { kind: 'letters', text: 'A B C' }, explainVisual: null };
   },
 });
 
@@ -23772,36 +23824,38 @@ const MEANING_ITEMS = [
   { word: 'can', visual: { kind: 'solid', name: 'cylinder' } }, { word: 'cone', visual: { kind: 'solid', name: 'cone' } },
 ];
 const NUMBER_WORDS = ['one', 'two', 'three', 'four', 'five', 'six'];
+// What each meaning word looks like, so every explanation gives the reason the picture fits (pass JV).
+const MEANING_HOW = { circle: 'It is round, with no corners', square: 'It has four sides that are all the same length', triangle: 'It has three sides and three corners', rectangle: 'It has four sides, two long and two short', ball: 'It is round all over', box: 'It has six flat sides', can: 'It has round ends and straight sides', cone: 'It is round at one end and comes to a point' };
 const NUMBER_NAMES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];   // by value, so five is at 5
 Object.assign(GENERATORS, {
   'rm-match-picture': (rng) => {
     const it = pick(rng, MEANING_ITEMS);
     const others = shuffle(rng, MEANING_ITEMS.filter((x) => x.word !== it.word)).slice(0, 2);
     return { type: 'choice', story: null, prompt: 'Which word goes with the picture?', choices: shuffle(rng, [it.word, ...others.map((x) => x.word)]), answer: it.word,
-      explain: `The picture shows a ${it.word}.`, visual: it.visual, explainVisual: null };
+      explain: `${MEANING_HOW[it.word]}, so the word is ${it.word}.`, visual: it.visual, explainVisual: null };
   },
   'rm-pick-word': (rng) => {
     const it = pick(rng, MEANING_ITEMS);
     const others = shuffle(rng, MEANING_ITEMS.filter((x) => x.word !== it.word)).slice(0, 2);
     const key = (x) => `${x.visual.kind}:${x.visual.name}`;
     return { type: 'choice', story: `The word is ${it.word}.`, prompt: 'Tap the picture that matches.', choices: shuffle(rng, [it, ...others].map(key)), answer: key(it),
-      explain: `${capFirst(aOrAn(it.word))} ${it.word} looks like this.`, visual: null, explainVisual: null };
+      explain: `This is ${aOrAn(it.word)} ${it.word}. ${MEANING_HOW[it.word]}.`, visual: null, explainVisual: null };
   },
   'rm-does-match': (rng) => {
     const it = pick(rng, MEANING_ITEMS); const yes = randInt(rng, 0, 1) === 1;
     const shown = yes ? it : pick(rng, MEANING_ITEMS.filter((x) => x.word !== it.word));
     return { type: 'choice', story: `The word says ${it.word}.`, prompt: 'Does the picture match?', choices: ['Yes', 'No'], answer: yes ? 'Yes' : 'No',
-      explain: yes ? `The picture shows a ${it.word}. They match.` : `The picture shows a ${shown.word}, not a ${it.word}.`, visual: shown.visual, explainVisual: null };
+      explain: yes ? `The word says ${it.word}, and the picture shows ${aOrAn(it.word)} ${it.word}, so they match.` : `The word says ${it.word}, but the picture shows ${aOrAn(shown.word)} ${shown.word}, so they do not match.`, visual: shown.visual, explainVisual: null };
   },
   'rm-count-word': (rng) => {
-    const n = randInt(rng, 1, 6);
+    const n = randInt(rng, 1, 6); const howMany = n === 1 ? 'There is one' : `There are ${NUMBER_WORDS[n - 1]}`;
     return { type: 'choice', story: null, prompt: 'Which word tells how many?', choices: shuffle(rng, distinctCounts(rng, 3, 6, n).map((c) => NUMBER_WORDS[c - 1])), answer: NUMBER_WORDS[n - 1],
-      explain: `${countUp(n)}. The word is ${NUMBER_WORDS[n - 1]}.`, visual: { kind: 'dots', count: n }, explainVisual: null };
+      explain: `Count the dots, ${countUp(n).toLowerCase()}. ${howMany}, so the word is ${NUMBER_WORDS[n - 1]}.`, visual: { kind: 'dots', count: n }, explainVisual: null };
   },
   'rm-shape-word': (rng) => {
     const it = pick(rng, MEANING_ITEMS.slice(0, 4));
     return { type: 'choice', story: `Read the word ${it.word}.`, prompt: 'Tap that shape.', choices: shuffle(rng, [it, ...shuffle(rng, MEANING_ITEMS.slice(0, 4).filter((x) => x.word !== it.word)).slice(0, 2)].map((x) => `shape:${x.visual.name}`)), answer: `shape:${it.visual.name}`,
-      explain: `${it.word[0].toUpperCase() + it.word.slice(1)}. This is the ${it.word}.`, visual: null, explainVisual: null };
+      explain: `${MEANING_HOW[it.word]}, so this is the ${it.word}.`, visual: null, explainVisual: null };
   },
 });
 
@@ -23821,8 +23875,8 @@ export const TRACE_LETTERS = {
   F: { strokes: [[[30, 15], [30, 85]], [[30, 15], [75, 15]], [[30, 50], [65, 50]]] },
   V: { strokes: [[[20, 15], [50, 85], [80, 15]]] },
   A: { strokes: [[[50, 15], [20, 85]], [[50, 15], [80, 85]], [[32, 60], [68, 60]]] },
-  N: { strokes: [[[25, 85], [25, 15], [75, 85], [75, 15]]] },
-  M: { strokes: [[[20, 85], [20, 15], [50, 60], [80, 15], [80, 85]]] },
+  N: { strokes: [[[25, 15], [25, 85]], [[25, 15], [75, 85], [75, 15]]] },
+  M: { strokes: [[[20, 15], [20, 85]], [[20, 15], [50, 60], [80, 15], [80, 85]]] },
   O: { strokes: [[[50, 15], [22, 30], [15, 50], [22, 70], [50, 85], [78, 70], [85, 50], [78, 30], [50, 15]]] },
   C: { strokes: [[[78, 28], [50, 15], [22, 30], [15, 50], [22, 70], [50, 85], [78, 72]]] },
   K: { strokes: [[[28, 15], [28, 85]], [[72, 15], [28, 52]], [[28, 52], [72, 85]]] },
@@ -23872,11 +23926,11 @@ export const TRACE_LETTERS = {
   c: { strokes: [[[70, 50], [50, 42], [32, 50], [28, 63], [32, 76], [50, 85], [70, 76]]] },
   v: { strokes: [[[30, 42], [50, 85], [70, 42]]] },
   x: { strokes: [[[30, 42], [70, 85]], [[70, 42], [30, 85]]] },
-  n: { strokes: [[[32, 85], [32, 42]], [[32, 52], [44, 42], [60, 42], [68, 52], [68, 85]]] },
+  n: { strokes: [[[32, 42], [32, 85]], [[32, 52], [44, 42], [60, 42], [68, 52], [68, 85]]] },
   u: { strokes: [[[32, 42], [32, 74], [42, 85], [58, 85], [68, 74], [68, 42]], [[68, 42], [68, 85]]] },
-  m: { strokes: [[[24, 85], [24, 42]], [[24, 52], [32, 42], [42, 42], [48, 52], [48, 85]], [[48, 52], [56, 42], [66, 42], [74, 52], [74, 85]]] },
-  h: { strokes: [[[32, 85], [32, 15]], [[32, 52], [44, 42], [60, 42], [68, 52], [68, 85]]] },
-  r: { strokes: [[[36, 85], [36, 42]], [[36, 52], [46, 42], [60, 42], [66, 48]]] },
+  m: { strokes: [[[24, 42], [24, 85]], [[24, 52], [32, 42], [42, 42], [48, 52], [48, 85]], [[48, 52], [56, 42], [66, 42], [74, 52], [74, 85]]] },
+  h: { strokes: [[[32, 15], [32, 85]], [[32, 52], [44, 42], [60, 42], [68, 52], [68, 85]]] },
+  r: { strokes: [[[36, 42], [36, 85]], [[36, 52], [46, 42], [60, 42], [66, 48]]] },
   w: { strokes: [[[22, 42], [36, 85], [50, 50], [64, 85], [78, 42]]] },
   z: { strokes: [[[32, 42], [68, 42]], [[68, 42], [32, 85]], [[32, 85], [68, 85]]] },
   k: { strokes: [[[32, 15], [32, 85]], [[64, 42], [32, 66]], [[42, 58], [66, 85]]] },
@@ -23885,6 +23939,23 @@ const TRACE_EASY = ['L', 'T', 'I', 'H', 'E', 'F'];
 const TRACE_MEDIUM = ['V', 'A', 'N', 'M'];
 const TRACE_ANY = Object.keys(TRACE_LETTERS).filter((k) => k.length === 1 && /[A-Z]/.test(k));
 const TRACE_MORE = ['K', 'W', 'X', 'Y', 'Z'];
+// Tracing families (pass JV): each kindergarten tracing lesson traces every letter its questions ask, one family at a time.
+const TRACE_ROUND = ['O', 'C'];
+const TRACE_FIRST = [...TRACE_EASY, ...TRACE_ROUND];
+// How each letter is made, in the order TRACE_LETTERS draws it, so a missed trace hears the strokes (pass JV).
+const TRACE_HOW = {
+  L: 'L is a line down, then a line across the bottom.', T: 'T is a line across the top, then a line down the middle.', I: 'I is one line, straight down.',
+  H: 'H is two lines down, then a bridge across the middle.', E: 'E is a line down, then three lines across, at the top, the middle and the bottom.', F: 'F is a line down, then two lines across, at the top and the middle.',
+  O: 'O starts at the top and goes around to the left, all the way back to the dot.', C: 'C goes around like O, but it stops before it closes.',
+  K: 'K is a line down, then two slants that meet it in the middle.', W: 'W zigzags, slanting down, up, down and up.', X: 'X is two slanted lines that cross in the middle.',
+  Y: 'Y is two slants that meet in the middle, then a line straight down.', Z: 'Z goes across the top, slants down to the left, then goes across the bottom.',
+  M: 'M is a line down, then from the top a slant down, a slant up and a line down.', V: 'V slants down to a point, then slants back up.',
+  A: 'A is two slants down from its top point, then a bar across the middle.', N: 'N is a line down, then from the top a slant down and a line straight up.',
+  l: 'Small l is one tall line, straight down.', i: 'Small i is a short line down, then a dot on top.', t: 'Small t is a tall line down, then a short line across.',
+  o: 'Small o is a little circle that starts at the top and goes around to the left.', c: 'Small c goes around like small o, but it stops before it closes.',
+  v: 'Small v slants down to a point, then slants back up.', x: 'Small x is two slanted lines that cross in the middle.',
+  n: 'Small n is a line down, then a hump that goes over and down.', u: 'Small u goes down, curves around the bottom and up, then makes a short line down.',
+};
 const DOT_PICTURES = ['triangle', 'square', 'house', 'star', 'zigzag', 'boat', 'kite', 'fish', 'tree', 'cup'];
 const FIRST_LINES = ['line-down', 'line-across', 'line-wave', 'line-zigzag', 'line-circle'];
 const FIRST_MARKS = ['line-down', 'line-across', 'line-circle'];
@@ -23940,7 +24011,7 @@ function traceQuestion(letters) {
     const L = pick(rng, letters);
     const small = L === L.toLowerCase();
     return { type: 'trace', story: null, prompt: small ? `Trace the small letter ${L}.` : `Trace the letter ${L}.`, choices: [], answer: L,
-      explain: `That is ${small ? 'small ' : ''}${L}. Start at the dot and follow the arrow.`, visual: { kind: 'letters', text: L }, explainVisual: null };
+      explain: `${TRACE_HOW[L] || `That is ${small ? 'small ' : ''}${L}.`} Start at the dot and follow the arrow.`, visual: { kind: 'letters', text: L }, explainVisual: null };
   };
 }
 Object.assign(GENERATORS, {
@@ -23948,6 +24019,8 @@ Object.assign(GENERATORS, {
   'rt-trace-medium': traceQuestion(TRACE_MEDIUM),
   'rt-trace-any': traceQuestion(TRACE_ANY),
   'rt-trace-more': traceQuestion(TRACE_MORE),
+  'rt-trace-round': traceQuestion(TRACE_ROUND),
+  'rt-trace-first': traceQuestion(TRACE_FIRST),
   'p3-trace-mark': (rng) => {
     const name = pick(rng, FIRST_MARKS);
     return { type: 'trace', traceKind: 'line', story: null, prompt: `Draw ${LINE_WORDS[name]}. Start at the dot.`, choices: [], answer: name,
@@ -23986,7 +24059,7 @@ Object.assign(GENERATORS, {
   'pk-trace-van': (rng) => {
     const L = pick(rng, ['V', 'A', 'N']);
     return { type: 'trace', story: null, prompt: `Trace the letter ${L}.`, choices: [], answer: L,
-      explain: `That is ${L}. Slanted lines, start at the dot.`, visual: { kind: 'letters', text: L }, explainVisual: null };
+      explain: `${TRACE_HOW[L]} Start at the dot and follow the arrow.`, visual: { kind: 'letters', text: L }, explainVisual: null };
   },
   'pl-trace-ltf': (rng) => {
     const L = pick(rng, ['L', 'T', 'F']);
@@ -24027,7 +24100,7 @@ Object.assign(GENERATORS, {
     return { type: 'trace', traceKind: 'dots', story: null, prompt: `Connect the dots to make a ${name}.`, choices: [], answer: name,
       explain: `That makes a ${name}. Start at 1 and go in order.`, visual: null, explainVisual: null };
   },
-  'rt-trace-mixed': traceQuestion([...TRACE_EASY, ...TRACE_MEDIUM, ...TRACE_MORE]),
+  'rt-trace-mixed': traceQuestion([...TRACE_MORE, 'M']),   // zigzags and crosses, the letters its lesson traces (pass JV)
   'rt-trace-small-easy': traceQuestion(TRACE_SMALL_EASY),
   'rt-trace-small-round': traceQuestion(TRACE_SMALL_ROUND),
   'rt-trace-small-any': traceQuestion(TRACE_SMALL_ANY),
@@ -24048,6 +24121,8 @@ const SOUND_WORDS = [
   { word: 'nut', letter: 'N', sound: 'nnn' }, { word: 'net', letter: 'N', sound: 'nnn' },
 ];
 // Families of words that end the same way. Every word is one a child can say.
+// The ending a child listens for in a rhyme: the vowel and everything after it (cat gives at, up gives up). Pass JV.
+function rimeOf(word) { const w = String(word); const i = w.search(/[aeiou]/); return i < 0 ? w : w.slice(i); }
 const RHYME_FAMILIES = [
   ['cat', 'hat', 'bat', 'mat'], ['dog', 'log', 'fog', 'jog'], ['sun', 'bun', 'run', 'fun'],
   ['pig', 'wig', 'dig', 'big'], ['hen', 'pen', 'ten', 'men'], ['cup', 'pup', 'up'],
@@ -24116,32 +24191,35 @@ Object.assign(GENERATORS, {
     return { type: 'choice', story: 'Two start the same way.', prompt: 'Which one starts differently?', choices: shuffle(rng, [w.word, twin.word, odd.word]), answer: odd.word,
       explain: `${capFirst(w.word)} and ${twin.word} start with ${w.sound}. ${capFirst(odd.word)} starts with ${odd.sound}.`, visual: null, explainVisual: null };
   },
-// Rhymes. Each family is a set of words that end the same way.
+// Rhymes. Each family is a set of words that end the same way. rimeOf gives the ending a child listens for, from the
+// vowel on (cat ends with at), and every explanation names it, so a child who misses hears why (pass JV).
   'rr-does-rhyme': (rng) => {
     const fam = pick(rng, RHYME_FAMILIES); const [a, b] = shuffle(rng, fam).slice(0, 2);
     const yes = randInt(rng, 0, 1) === 1;
     const c = yes ? b : pick(rng, pick(rng, RHYME_FAMILIES.filter((f) => f !== fam)));
     return { type: 'choice', story: `${capFirst(a)}. ${capFirst(c)}.`, prompt: 'Do they rhyme?', choices: ['Yes', 'No'], answer: yes ? 'Yes' : 'No',
-      explain: yes ? `${capFirst(a)} and ${c} end the same way. They rhyme.` : `${capFirst(a)} and ${c} end differently. They do not rhyme.`, visual: { kind: 'letters', text: `${a} ${c}` }, explainVisual: null };
+      explain: yes ? `${capFirst(a)} and ${c} both end with ${rimeOf(a)}, so they rhyme.` : `${capFirst(a)} ends with ${rimeOf(a)} and ${c} ends with ${rimeOf(c)}, so they do not rhyme.`, visual: { kind: 'letters', text: `${a} ${c}` }, explainVisual: null };
   },
   'rr-pick-rhyme': (rng) => {
     const fam = pick(rng, RHYME_FAMILIES); const [a, b] = shuffle(rng, fam).slice(0, 2);
     const others = shuffle(rng, RHYME_FAMILIES.filter((f) => f !== fam)).slice(0, 2).map((f) => pick(rng, f));
     return { type: 'choice', story: `${capWord(a)}.`, prompt: `Which word rhymes with ${a}?`, choices: shuffle(rng, [b, ...others]), answer: b,
-      explain: `${capFirst(a)} and ${b} rhyme. They end the same way.`, visual: { kind: 'letters', text: a }, explainVisual: null };
+      explain: `${capFirst(a)} and ${b} both end with ${rimeOf(a)}, so they rhyme.`, visual: { kind: 'letters', text: a }, explainVisual: null };
   },
   'rr-odd-rhyme': (rng) => {
     const fam = pick(rng, RHYME_FAMILIES); const [a, b] = shuffle(rng, fam).slice(0, 2);
     const odd = pick(rng, pick(rng, RHYME_FAMILIES.filter((f) => f !== fam)));
     return { type: 'choice', story: 'Two of these rhyme.', prompt: 'Which one does not?', choices: shuffle(rng, [a, b, odd]), answer: odd,
-      explain: `${a} and ${b} rhyme. ${capFirst(odd)} does not.`, visual: null, explainVisual: null };
+      explain: `${capFirst(a)} and ${b} both end with ${rimeOf(a)}. ${capFirst(odd)} ends with ${rimeOf(odd)}, so it does not rhyme with them.`, visual: null, explainVisual: null };
   },
   'rr-same-end': (rng) => {
-    const fam = pick(rng, RHYME_FAMILIES); const [a, b] = shuffle(rng, fam).slice(0, 2);
-    const ending = a.slice(-2);
+    const fam = pick(rng, RHYME_FAMILIES);
+    const a = pick(rng, fam.filter((w) => !/^[aeiou]/.test(w)));   // a word with a start of its own, never "Up ends with up"
+    const b = pick(rng, fam.filter((w) => w !== a));
+    const ending = rimeOf(a);
     const others = shuffle(rng, RHYME_FAMILIES.filter((f) => f !== fam)).slice(0, 2).map((f) => pick(rng, f));
     return { type: 'choice', story: `${capFirst(a)} ends with ${ending}.`, prompt: `Which word also ends with ${ending}?`, choices: shuffle(rng, [b, ...others]), answer: b,
-      explain: `${capFirst(b)} ends with ${ending} too. ${capFirst(a)} and ${b} rhyme.`, visual: { kind: 'letters', text: a }, explainVisual: null };
+      explain: `${capFirst(b)} ends with ${ending} too, so ${a} and ${b} rhyme.`, visual: { kind: 'letters', text: a }, explainVisual: null };
   },
   'rr-which-two': (rng) => {
     const fam = pick(rng, RHYME_FAMILIES); const [a, b] = shuffle(rng, fam).slice(0, 2);
@@ -24149,7 +24227,7 @@ Object.assign(GENERATORS, {
     const pair = `${a} and ${b}`;
     const wrong1 = `${a} and ${odd}`; const wrong2 = `${b} and ${odd}`;
     return { type: 'choice', story: `${capFirst(a)}, ${b}, ${odd}.`, prompt: 'Which two rhyme?', choices: shuffle(rng, [pair, wrong1, wrong2]), answer: pair,
-      explain: `${a} and ${b} end the same way.`, visual: null, explainVisual: null };
+      explain: `${capFirst(a)} and ${b} both end with ${rimeOf(a)}, so they rhyme.`, visual: null, explainVisual: null };
   },
   'r-count-letters': (rng) => {
     const word = pick(rng, SHORT_WORDS);

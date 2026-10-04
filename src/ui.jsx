@@ -424,7 +424,7 @@ function TenFrame({ filled, size = 30 }) {
 // One of the four kindergarten shapes, drawn large. A choice 'shape:square#2' carries a
 // suffix so the same shape can appear twice; the drawing ignores it.
 // Simple drawn icons for the spoken science courses. Each is named by the word a child hears.
-const ICON_NAMES = ['sun', 'moon', 'cloud', 'rain', 'snow', 'plant', 'tree', 'flower', 'fish', 'bird', 'rock', 'drop', 'ice', 'fire', 'magnet', 'clip', 'nail'];
+const ICON_NAMES = ['sun', 'moon', 'cloud', 'rain', 'snow', 'plant', 'tree', 'flower', 'fish', 'bird', 'rock', 'drop', 'ice', 'fire', 'magnet', 'clip', 'nail', 'pizza'];
 // Tracing and connect-the-dots need a finger or a stylus on a screen, never a mouse.
 function hasTouchScreen() { try { return typeof window !== 'undefined' && ((window.matchMedia && window.matchMedia('(pointer: coarse)').matches) || (navigator.maxTouchPoints || 0) > 0); } catch (e) { return false; } }
 
@@ -447,6 +447,9 @@ function RemembranceCard({ educator = false }) {
 function IconPic({ name, size = 90 }) {
   const gold = C.gold; const green = C.green; const grey = '#8A9086'; const blue = '#4A86C5'; const red = '#C9573E'; const brown = '#8B5A2B';
   const body = {
+    // A slice of pizza (pass JV, Mikey): drawn beside a triangle where a lesson says a slice is almost a triangle. The point is
+    // at the bottom and the crust is the curved top edge, so the three corners line up with the triangle's.
+    pizza: <g><path d="M18 24 Q50 8 82 24 L50 90 Z" fill="#F2C14E" stroke="#C98A2E" strokeWidth="3" strokeLinejoin="round" /><path d="M18 24 Q50 8 82 24 L79 31 Q50 17 21 31 Z" fill="#C98A2E" /><circle cx="44" cy="40" r="6" fill={red} /><circle cx="58" cy="52" r="5.5" fill={red} /><circle cx="48" cy="66" r="5" fill={red} /></g>,
     sun: <g><defs><radialGradient id="eduSunG" cx="40%" cy="38%" r="65%"><stop offset="0" stopColor="#FFF1B8" /><stop offset="0.6" stopColor={gold} /><stop offset="1" stopColor="#D99A2B" /></radialGradient></defs><circle cx="50" cy="50" r="30" fill={gold} opacity="0.18" /><circle cx="50" cy="50" r="20" fill="url(#eduSunG)" />{[0, 45, 90, 135, 180, 225, 270, 315].map((a) => <line key={a} x1={50 + 28 * Math.cos(a * Math.PI / 180)} y1={50 + 28 * Math.sin(a * Math.PI / 180)} x2={50 + 40 * Math.cos(a * Math.PI / 180)} y2={50 + 40 * Math.sin(a * Math.PI / 180)} stroke={gold} strokeWidth="5" strokeLinecap="round" />)}</g>,
     // The moon (pass IT): the old path's two arcs fell onto the same half-circle and drew nothing. Now a crescent, an outer
     // half-circle and a flatter inner arc.
@@ -6760,7 +6763,7 @@ function EduSphereScreens() {
   const [openProgressGroups, setOpenProgressGroups] = useState([]);
   const [openMapGroups, setOpenMapGroups] = useState([]);           // the standards map's dropdowns, closed until opened
   const [openMapHeads, setOpenMapHeads] = useState([]);             // the standards map's grade (or subject) headings, closed until opened
-  const [mapOrder, setMapOrder] = useState('grade');                // the standards map: grouped by grade, or by subject
+  const mapOrder = 'grade';   // the standards map is grouped by grade only (pass JV, Mikey: one row of toggles, core or elective)
   const [classFilter, setClassFilter] = useState('all');            // who needs help: everyone, or only the flagged, or only missed quick checks
   const [noteSearch, setNoteSearch] = useState('');                  // who needs help: find students by what you wrote about them
   const [showQuickTip, setShowQuickTip] = useState(false);           // the quick checks explanation on the Classroom page
@@ -8819,9 +8822,8 @@ function EduSphereScreens() {
         <p style={{ color: C.muted, marginTop: 0, fontSize: 15, textAlign: 'center' }}>
           {stateCode && fw !== 'CCSS' ? `Every module, matched to ${stateFor(stateCode).name}'s standards (${FRAMEWORKS[fw].name}).` : `Every module, matched to ${FRAMEWORKS.CCSS.name}.`}<br />Print this page for a coverage record.
         </p>
-        {/* Grouped by grade (each grade a heading, one light-green dropdown per subject) or by subject.
-            The list grows by itself as courses are added, because it is read from the curriculum plan. */}
-        <SegToggle options={[['grade', 'By grade'], ['subject', 'By subject']]} value={mapOrder} onChange={setMapOrder} ariaLabel="Group by grade or by subject" />
+        {/* Grouped by grade: each grade a heading, one light-green dropdown per subject. Pass JV (Mikey): the by-subject view is
+            gone, so the only toggle on the page is core or elective. The list grows by itself, because it is read from the plan. */}
         {(() => {
           const subjectOrder = sortSubjects(plan.map((entry) => entry.subject));
           // A plan is an elective when every module it names sits in an elective course.
@@ -10529,7 +10531,8 @@ function EduSphereScreens() {
           <HeadWithInfo onClick={() => setShowNoteWhy(!showNoteWhy)} label="About notes" open={showNoteWhy}>Notes</HeadWithInfo>
           {showNoteWhy && <p style={{ margin: '0 0 12px', fontSize: 13, color: C.muted, textAlign: 'center' }}>A note here stays with the student and can be restored through backups. Quickly search student notes through the Who Needs Help page.</p>}
           {/* Each note sits on its own soft green card, centered, with Edit and Remove under it. An edit is
-              the old note removed and the new one written, so the log still says everything that happened. */}
+              the old note removed and the new one written, so the log still says everything that happened. In the dark theme
+              the card stays light, so its date and links take dark ink (pass JV, Mikey's screenshot: they had all but vanished). */}
           {rep.notes.map((n) => (
             <div key={n.id} style={{ margin: '0 0 8px', padding: '10px 12px', borderRadius: 10, ...(C.mode === 'dark' ? { background: '#AAD8C5', border: '1px solid #AAD8C5', color: '#16201B' } : { background: C.tipBg, border: `1px solid ${C.tipLine}` }), textAlign: 'center' }}>
               {editingNote && editingNote.id === n.id ? (
@@ -10544,9 +10547,9 @@ function EduSphereScreens() {
               ) : (
                 <>
                   <p style={{ margin: 0, fontSize: 15, whiteSpace: 'pre-wrap' }}>{n.text}</p>
-                  <p style={{ margin: '4px 0 0', fontSize: 13, color: C.muted }}>{fmtDate(n.at)}
-                    <button type="button" className="edu-no-print" style={{ ...linkBtn, fontSize: 13, marginLeft: 8 }} onClick={() => setEditingNote({ id: n.id, text: n.text })}>Edit</button>
-                    <button type="button" className="edu-no-print" style={{ ...linkBtn, fontSize: 13, marginLeft: 8 }} onClick={() => addToStudent(makeNoteRemovedEvent(n.id, new Date().toISOString()))}>Remove</button>
+                  <p style={{ margin: '4px 0 0', fontSize: 13, color: C.mode === 'dark' ? '#3B4A41' : C.muted }}>{fmtDate(n.at)}
+                    <button type="button" className="edu-no-print" style={{ ...linkBtn, fontSize: 13, marginLeft: 8, ...(C.mode === 'dark' ? { color: '#1B5641', fontWeight: 600 } : {}) }} onClick={() => setEditingNote({ id: n.id, text: n.text })}>Edit</button>
+                    <button type="button" className="edu-no-print" style={{ ...linkBtn, fontSize: 13, marginLeft: 8, ...(C.mode === 'dark' ? { color: '#1B5641', fontWeight: 600 } : {}) }} onClick={() => addToStudent(makeNoteRemovedEvent(n.id, new Date().toISOString()))}>Remove</button>
                   </p>
                 </>
               )}

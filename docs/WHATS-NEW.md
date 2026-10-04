@@ -2,6 +2,13 @@
 
 The newest block is what educators see once, in a pop-up on the classroom page, after each update. Write it the way Mikey talks to a teacher: conversational, complete sentences, say what changed and why it matters, and skip the shorthand (2026-09-23). Two to four items. The date line is the version stamp.
 
+## October 4, 2026 (kindergarten letters finished)
+
+- The sounding out lesson now says sounds, not letter names. It used to read c, a, t aloud, which a voice says as see, ay, tee, and those names never blend into cat. It now teaches the five short vowel sounds with a word for each (apple, egg, igloo, octopus and up).
+- Every kindergarten tracing lesson now shows each letter it asks a child to trace, one family at a time, and N, M and the small letters n, h, m and r now start at the top, the way handwriting is taught.
+- The pre-K triangle lesson now shows a pizza slice beside the triangle, so children can see why a slice is almost a triangle.
+- The standards map has one row of choices now, core or elective, and lists everything by grade. In the dark theme, a saved note's date and its Edit and Remove links are easy to read again.
+
 ## October 4, 2026 (kindergarten letters and sounds)
 
 - Kindergarten's first five letter lessons now teach everything their questions ask. The letter names lesson says the whole alphabet in order, and the letter sounds lesson teaches every sound its questions use, not just M and S.

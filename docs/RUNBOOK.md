@@ -16,6 +16,36 @@ fixed, ask them to reload once with a hard refresh.
 Never break old backups. A backup file from each format version lives in
 `tests/fixtures` and `./check.sh` fails if any of them stops restoring.
 
+## Taking a new delivery into your folder
+
+Every pass arrives as one zip, edusphere-project.zip, and that zip is the whole project. Your folder on the Mac should
+end up matching it exactly, apart from the .git folder (the history GitHub Desktop keeps) and a few things of your own.
+
+The easy way, in Terminal, from inside your folder:
+
+    bash tools/update-from-zip.sh ~/Downloads/edusphere-project.zip
+
+Type the first part, then drag the zip onto the Terminal window to fill in its path. The script copies every file
+from the zip in fresh and removes every file the zip does not have, so nothing stale or duplicated can survive. It
+never touches .git, .gitattributes, anything .gitignore names, or pictures and sounds you made yourself in art/ and
+audio/. It refuses to run while anything is uncommitted, so whatever it removes can always come back from git. When
+it finishes, commit in GitHub Desktop with the message in docs/COMMIT-MESSAGE.md.
+
+The Finder way: show hidden files (Command, Shift and the period key), select everything in your folder except .git
+and .gitattributes, move it to the Trash, then drag everything from the unzipped download into the folder. If Finder
+ever asks Keep Both or Replace, the answer is Replace. Keep Both is what makes copies named like "index 2.html".
+
+Why copies appear (pass JV): files named "index 2.html", ".gitignore 3" or "sw 5.js" are copies the Mac made, never
+files from the zip. Finder makes them when Keep Both is chosen, and iCloud Drive makes them when a file changes while
+it is still syncing, which is easy to do with a folder of a hundred files replaced at once. GitHub Desktop then shows
+the copies as new files, and a commit of everything carries them to GitHub. iCloud can also make copies inside .git
+itself and leave parts of it in the cloud only, which can break the history. A git repository is safest in a folder
+iCloud does not sync, such as a Developer folder in your home folder (not on the Desktop and not in Documents when
+iCloud syncs those). The simplest move: in GitHub Desktop, choose File, then Clone Repository, pick this repository
+and set the local path to that new folder; GitHub holds everything you have pushed.
+
+Making that folder: in Finder choose Go, then Home, then File, then New Folder, and name it Developer. iCloud never syncs the home folder itself, only Desktop and Documents (when that setting is on) and iCloud Drive, so anything in Developer stays on the Mac. Drag it into the Finder sidebar to reach it quickly; an alias on the Desktop is fine too, because only the small alias file syncs, never the folder it points to. There is no setting that keeps one folder on the Desktop out of iCloud. Folders whose names end in .nosync are skipped by iCloud, but Apple does not document that, so do not trust a repository to it.
+
 ## Today: phase 0
 
 There is no server. The product is one file that runs inside the browser, and every
