@@ -1,0 +1,16 @@
+{
+  "name": "The Wise Human",
+  "short_name": "Wise Human",
+  "description": "Mastery-based learning for pre-K to 12, with nothing leaving the device.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F5F7F1",
+  "theme_color": "#2F5D4F",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

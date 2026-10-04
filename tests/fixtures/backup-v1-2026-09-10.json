@@ -1,0 +1,166 @@
+{
+  "app": "EduSphere",
+  "version": 1,
+  "savedAt": "2026-09-10T16:00:00.000Z",
+  "deviceName": "iPad 3",
+  "studentIds": [
+    "s_1042",
+    "s_2001"
+  ],
+  "roster": {
+    "version": 1,
+    "students": [
+      {
+        "id": "s_1042",
+        "label": "S-1042",
+        "createdAt": "2026-09-10T15:00:00.000Z",
+        "active": true,
+        "level": "early",
+        "picture": "fox",
+        "tint": "sun"
+      },
+      {
+        "id": "s_2001",
+        "label": "S-2001",
+        "createdAt": "2026-09-10T15:01:00.000Z",
+        "active": true,
+        "level": "elementary",
+        "picture": null,
+        "tint": null
+      }
+    ]
+  },
+  "records": [
+    {
+      "name": "s_1042",
+      "events": [
+        {
+          "type": "lesson_viewed",
+          "at": "2026-09-10T15:05:00.000Z",
+          "moduleId": "count-to-5"
+        },
+        {
+          "type": "attempt_completed",
+          "at": "2026-09-10T15:10:00.000Z",
+          "startedAt": "2026-09-10T15:10:00.000Z",
+          "moduleId": "count-to-5",
+          "seed": 7,
+          "core": [
+            {
+              "correct": true,
+              "timeMs": 5000
+            },
+            {
+              "correct": true,
+              "timeMs": 6000
+            },
+            {
+              "correct": true,
+              "timeMs": 4000
+            },
+            {
+              "correct": true,
+              "timeMs": 7000
+            },
+            {
+              "correct": true,
+              "timeMs": 5000
+            }
+          ],
+          "review": null,
+          "coreCorrect": 5,
+          "coreTotal": 5
+        },
+        {
+          "type": "attempt_completed",
+          "at": "2026-09-10T15:20:00.000Z",
+          "startedAt": "2026-09-10T15:20:00.000Z",
+          "moduleId": "count-to-10",
+          "seed": 7,
+          "core": [
+            {
+              "correct": true,
+              "timeMs": 5000
+            },
+            {
+              "correct": true,
+              "timeMs": 6000
+            },
+            {
+              "correct": true,
+              "timeMs": 4000
+            },
+            {
+              "correct": true,
+              "timeMs": 7000
+            },
+            {
+              "correct": false,
+              "timeMs": 5000
+            }
+          ],
+          "review": null,
+          "coreCorrect": 4,
+          "coreTotal": 5
+        }
+      ]
+    },
+    {
+      "name": "s_2001",
+      "events": [
+        {
+          "type": "courses_enabled",
+          "at": "2026-09-10T15:02:00.000Z",
+          "courseIds": [
+            "fractions-intro"
+          ]
+        },
+        {
+          "type": "attempt_completed",
+          "at": "2026-09-10T15:30:00.000Z",
+          "startedAt": "2026-09-10T15:30:00.000Z",
+          "moduleId": "fraction-meaning",
+          "seed": 7,
+          "core": [
+            {
+              "correct": true,
+              "timeMs": 5000
+            },
+            {
+              "correct": true,
+              "timeMs": 6000
+            },
+            {
+              "correct": true,
+              "timeMs": 4000
+            },
+            {
+              "correct": true,
+              "timeMs": 7000
+            },
+            {
+              "correct": true,
+              "timeMs": 5000
+            }
+          ],
+          "review": null,
+          "coreCorrect": 5,
+          "coreTotal": 5
+        }
+      ]
+    }
+  ],
+  "wonderReview": {
+    "version": 1,
+    "approved": [
+      "w-ants-elephant"
+    ],
+    "hidden": []
+  },
+  "covered": {
+    "version": 1,
+    "covered": [
+      "ls-bike"
+    ]
+  }
+}

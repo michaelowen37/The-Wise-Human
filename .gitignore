@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+tests/e2e/out/
+tests/e2e/page.html
+tests/e2e/page-licensed.html

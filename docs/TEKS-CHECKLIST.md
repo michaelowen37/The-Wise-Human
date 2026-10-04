@@ -1,0 +1,17 @@
+# TEKS codes: verified
+
+Every history standard now cites a knowledge-statement number checked against the Texas Education Agency's currently effective text (19 TAC Chapter 113, Subchapters A, B and C, August 2024 update, "Adopted 2022"), read on 2026-09-15:
+
+- Subchapter A, Elementary: https://tea.texas.gov/laws-and-rules/sboe-rules-tac/sboe-tac-currently-effect/ch113a.pdf (K, 1, 2, 3)
+- Subchapter B, Middle School: https://tea.texas.gov/laws-and-rules/sboe-rules-tac/sboe-tac-currently-effect/ch113b.pdf (6, 7)
+- Subchapter C, High School: https://tea.texas.gov/laws-and-rules/sboe-rules-tac/sboe-tac-currently-effect/ch113c.pdf (§113.31 Economics, §113.43 World Geography, §113.44 Government)
+
+Two things worth knowing. The Government and Economics knowledge statements were renumbered in the 2022 adoption, so the earlier GOVT.7 to GOVT.12 and ECON.3 codes were from the 2018 text and have been replaced (constitutional principles are now GOVT.6D, the three branches GOVT.7A, federalism GOVT.8B, the Bill of Rights GOVT.12C, parties GOVT.10A, electing the president GOVT.9B; supply and demand ECON.2A). The college course cites the Texas College and Career Readiness Standards for Social Studies (2009) by standard (I.B.1, I.B.2, I.B.3, IV.A.1, IV.D.1), read on 2026-09-15 from the TEA's CCRS-to-TEKS alignment figure (19 TAC §74.6(d), https://tea.texas.gov/about-tea/laws-and-rules/sboe-rules-tac/sboe-tac-currently-in-effect/1900740006-3.pdf). The Council for Economic Education standard numbers on the grade 12 economics course (1, 2, 7, 9, 11, 12, 19, 20) were checked the same day against the published list of the twenty Voluntary National Content Standards (https://fte.org/teachers/teacher-resources/voluntary-national-content-standards-in-economics/) and all match.
+
+If the SBOE adopts the new social studies TEKS now in first reading (2026), the numbers will need another pass; the Standards map will still print correctly in the meantime.
+
+## Pre-K guidelines and Head Start goals, verified 2026-09-15
+
+The pre-K plans and lesson sources now cite the 2022 Texas Prekindergarten Guidelines by outcome, with PK3 and PK4 wording taken from the Children's Learning Institute's published alignment of the Circle Progress Monitoring measures to the 2022 guidelines (https://public.cliengage.org/training/support/how-to-guides/circle-progress-monitoring-texas-pkg-alignment/, last modified 2026-09-04). Corrections made: the tracing modules had cited VI.B.1 (VI is Science; fine motor is IX.B.2), the measurement module had cited V.C.1 (Geometry; measurement is V.D.1), sorting had cited V.D.1 (Measurement; classification is V.E.1), and "takes turns" had cited I.C.3 (cooperative play is I.C.4). II.A.1 was confirmed separately against the TEA's 2015-to-2022 side-by-side outcomes for PK4 (https://tea.texas.gov/sites/default/files/pkg-2015-2022-side-by-side-pk4.pdf): "Child shows understanding by responding appropriately to what has been communicated by adults and peers."
+
+The Head Start Early Learning Outcomes Framework goals were checked against a published correlation of the preschool goals (https://www.frogstreet.com/wp-content/uploads/2021/09/EXH2640_AIM_FSPreK_HeadStartCorrelation.pdf): P-SE 2 is prosocial and cooperative behavior with adults, P-SE 3 is positive interactions and relationships with other children, comparing numbers is P-MATH 4 (P-MATH 5 is associating quantities with numerals), and P-PMP 3, P-MATH 8, P-MATH 9, P-LIT 1, P-LIT 3, P-LIT 6, P-LC 1 and P-MATH 7 matched as cited.
